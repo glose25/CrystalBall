@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5023" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="JGViewController" sceneMemberID="viewController">
@@ -15,13 +15,47 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CB00001" translatesAutoresizingMaskIntoConstraints="NO" id="dGY-SF-PgB">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It is decidedly so." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="248" translatesAutoresizingMaskIntoConstraints="NO" id="w5B-2h-ptW">
+                                <rect key="frame" x="36" y="201" width="248" height="140"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="248" id="cMk-iH-EuC"/>
+                                    <constraint firstAttribute="height" constant="140" id="pfw-vW-uzB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" red="0.92156869173049927" green="0.23529413342475891" blue="0.35686275362968445" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dGY-SF-PgB" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="TIW-ED-FcJ"/>
+                            <constraint firstAttribute="trailing" secondItem="dGY-SF-PgB" secondAttribute="trailing" id="UYw-RC-ssO"/>
+                            <constraint firstItem="dGY-SF-PgB" firstAttribute="centerX" secondItem="w5B-2h-ptW" secondAttribute="centerX" id="Ug9-B4-eHi"/>
+                            <constraint firstItem="dGY-SF-PgB" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="VML-3e-aur"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="dGY-SF-PgB" secondAttribute="bottom" id="d2Y-mh-Ny3"/>
+                            <constraint firstItem="dGY-SF-PgB" firstAttribute="centerY" secondItem="w5B-2h-ptW" secondAttribute="centerY" constant="13" id="jKZ-Vt-qda"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="dGY-SF-PgB" secondAttribute="bottom" id="vSQ-KO-Skc"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="dGY-SF-PgB" id="Xy6-N8-1zp"/>
+                        <outlet property="predictionLabel" destination="w5B-2h-ptW" id="9Hf-1e-f8o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="167" y="72"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="CB00001" width="320" height="568"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
